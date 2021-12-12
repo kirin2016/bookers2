@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+      <h2>Editing Book</h2>
+
+      <%= render 'books/error-m', miss: @book %>
+
+        <%= form_with model:@book, local:true do |f| %>
+          <label for="book_title">Title</label>
+          <div class="field"><%= f.text_field :title %></div>
+          <label for="book_body">Opinion</label>
+          <div class="field"><%= f.text_area :body %></div>
+          <%= f.submit 'Update Book',class:"btn btn-success" %>
+        <% end %>
+    </div>
+  </div>
+</div>

@@ -23,7 +23,7 @@
             <ul class="navbar-nav ml-auto">
 
             <li class="nav-item">
-              <%= link_to " Home", root_path, class: 'fas fa-home nav-link text-white' %>
+              <%= link_to " Home", user_path(current_user), class: 'fas fa-home nav-link text-white' %>
             </li>
             <% if user_signed_in? %>
             <li class="nav-item">
@@ -52,8 +52,8 @@
       </nav>
     </header>
     <main>
-      <p id="notice"></p>
-    <%= yield %>
+      <p id="notice"><%= render 'layouts/notifications' %></p>
+      <%= yield %>
     </main>
     <footer>
       <div class="container mt-5">

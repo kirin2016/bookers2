@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+      <h2>User info</h2>
+
+      <%= render 'books/error-m', miss: @user %>
+
+        <%= form_with model:@user, local:true do |f| %>
+          <label for="user_name">Name</label>
+          <div class="field"><%= f.text_field :name %></div>
+          <label for="inputImage">Image</label>
+          <div class="field"><%= f.attachment_field :profile_image, placeholder: "プロフィール画像" %></div>
+          <label for="user_introduction">Introduction</label>
+          <div class="field"><%= f.text_area :introduction %></div>
+          <%= f.submit 'Update User',class:"btn btn-secondary" %>
+        <% end %>
+    </div>
+  </div>
+</div>
