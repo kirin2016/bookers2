@@ -7,11 +7,11 @@
 
         <%= form_with model:@user, local:true do |f| %>
           <label for="user_name">Name</label>
-          <div class="field"><%= f.text_field :name %></div>
+          <div class="field"><%= f.text_field :name, class: "form-control" %></div>
           <label for="inputImage">Image</label>
           <div class="field"><%= f.attachment_field :profile_image, placeholder: "プロフィール画像" %></div>
           <label for="user_introduction">Introduction</label>
-          <div class="field"><%= f.text_area :introduction %></div>
+          <div class="field"><%= f.text_area :introduction, class: "form-control" %></div>
           <%= f.submit 'Update User',class:"btn btn-secondary" %>
         <% end %>
     </div>
