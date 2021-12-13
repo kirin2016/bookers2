@@ -5,13 +5,14 @@
 
       <%= render 'books/error-m', miss: @book %>
 
-        <%= form_with model:@book, local:true do |f| %>
-          <label for="book_title">Title</label>
-          <div class="field"><%= f.text_field :title %></div>
-          <label for="book_body">Opinion</label>
-          <div class="field"><%= f.text_area :body %></div>
-          <%= f.submit 'Update Book',class:"btn btn-success" %>
-        <% end %>
+      <%= form_with model:@book, local:true do |f| %>
+        <label for="book_title">Title</label>
+        <div class="field"><%= f.text_field :title %></div>
+        <label for="book_body">Opinion</label>
+        <div class="field"><%= f.text_area :body %></div>
+        <%= f.submit 'Update Book',class:"btn btn-success" %>
+      <% end %>
+      <%= link_to "Show", book_path(@book) %>  |  <%= link_to "Back", books_path %>
     </div>
   </div>
 </div>

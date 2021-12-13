@@ -1,6 +1,6 @@
 <% if miss.errors.any? %>
   <div class="error1">
-    <h3><%= miss.errors.count %> errors prohibited this obj from being saved:</h3>
+    <h3><%= pluralize(miss.errors.count, "error") %> prohibited this obj from being saved:</h3>
     <% miss.errors.full_messages.each do |message| %>
       <li><%= message %></li>
     <% end %>
